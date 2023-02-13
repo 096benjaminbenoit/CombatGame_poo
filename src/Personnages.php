@@ -1,0 +1,4 @@
+<?php
+
+namespace Benjaminbenoit\Composer;
+
