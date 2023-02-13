@@ -26,6 +26,6 @@ $chefMinion->attack = 100;
 $hero->lifeBonus();
 $hero->armorBonus();
 
-$minion->randomAttack($hero);
+$chefMinion->randomAttack($hero);
 
 dump($hero, $minion, $lieutenantMinion, $chefMinion);

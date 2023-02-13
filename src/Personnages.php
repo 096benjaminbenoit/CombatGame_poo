@@ -19,10 +19,14 @@ class Personnages {
     public function randomAttack($cible) {
         $random = rand(0, 1);
         if($random == 1) {
-            echo "Succès";
-            $cible->life = $cible->life - ($this->attack - $cible->armor);
+            if($this->attack < $cible->armor) {
+                echo "Trop d'armure pour perdre de la vie";
+            } else if ($this->attack > $cible->armor) {
+                echo "Succès de l'attaque";
+                $cible->life = $cible->life - ($this->attack - $cible->armor);
+            }
         } else {
-            echo "Echec";
+            echo "Echec de l'attaque";
         }
     }
 }
