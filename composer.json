@@ -11,5 +11,7 @@
             "name": "Ben"
         }
     ],
-    "require": {}
+    "require": {
+        "symfony/var-dumper": "^6.2"
+    }
 }
