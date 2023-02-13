@@ -18,15 +18,17 @@ class Personnages {
 
     public function randomAttack($cible) {
         $random = rand(0, 1);
-        if($random == 1) {
-            if($this->attack < $cible->armor) {
-                echo "Trop d'armure pour perdre de la vie";
-            } else if ($this->attack > $cible->armor) {
-                echo "Succès de l'attaque";
-                $cible->life = $cible->life - ($this->attack - $cible->armor);
-            }
-        } else {
+        if($random == 0) {
             echo "Echec de l'attaque";
+            return;
         }
+        
+        if($this->attack < $cible->armor) {
+            echo "Trop d'armure pour perdre de la vie";
+        } else if ($this->attack > $cible->armor) {
+            echo "Succès de l'attaque";
+            $cible->life = $cible->life - ($this->attack - $cible->armor);
+        }
+
     }
 }
