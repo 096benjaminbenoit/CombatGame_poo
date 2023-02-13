@@ -3,7 +3,7 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Benjaminbenoit\\CombatGamePoo\\": "src/"
+            "BenjaminChristelle\\CombatGamePoo\\": "src/"
         }
     },
     "authors": [
