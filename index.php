@@ -3,29 +3,15 @@ require_once "vendor/autoload.php";
 
 use BenjaminChristelle\CombatGamePoo\Personnages;
 
-$hero = new Personnages();
-$hero->name = "Christelle";
-$hero->life = 200;
-$hero->attack = 15;
+$hero = new Personnages("christelle", 200, 20, 15);
 
-$minion = new Personnages();
-$minion->name = "Minion";
-$minion->life = 10;
-$minion->attack = 10;
+$minion = new Personnages("minion", 10, 0, 10);
 
-$lieutenantMinion = new Personnages();
-$lieutenantMinion->name = "Lieutenant Minion";
-$lieutenantMinion->life = 30;
-$lieutenantMinion->attack = 30;
+$lieutenantMinion = new Personnages("lieutenant minion", 30, 0, 30);
 
-$chefMinion = new Personnages();
-$chefMinion->name = "Chef Minion";
-$chefMinion->life = 100;
-$chefMinion->attack = 100;
+$chefMinion = new Personnages("chef minion", 100, 0, 100);
+
 
 $hero->lifeBonus();
-$hero->armorBonus();
-
-$chefMinion->randomAttack($hero);
 
 dump($hero, $minion, $lieutenantMinion, $chefMinion);

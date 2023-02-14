@@ -8,8 +8,24 @@ class Personnages {
     public $armor;
     public $attack;
 
+    public function __construct($na, $li, $ar, $at) {
+        $this->name=$na;
+        $this->life=$li;
+        $this->armor=$ar;
+        $this->attack=$at;
+    }
+
     public function lifeBonus() {
-        $this->life = $this->life +50;
+        if($this->life >= 200) {
+            echo "Vie est au max </br>";
+            return;
+        } else {
+            $this->life = $this->life +50;
+            if($this->life >= 200) {
+                $this->life = 200;
+                echo "Vie est remis au max";
+            }
+        }
     }
 
     public function armorBonus() {
@@ -18,17 +34,19 @@ class Personnages {
 
     public function randomAttack($cible) {
         $random = rand(0, 1);
+        $randomDamage = rand(0, $this->attack);
         if($random == 0) {
             echo "Echec de l'attaque";
             return;
         }
         
-        if($this->attack < $cible->armor) {
+        if($randomDamage < $cible->armor) {
             echo "Trop d'armure pour perdre de la vie";
-        } else if ($this->attack > $cible->armor) {
+        } else if ($randomDamage > $cible->armor) {
             echo "Succès de l'attaque";
-            $cible->life = $cible->life - ($this->attack - $cible->armor);
+            $cible->life = $cible->life - ($randomDamage - $cible->armor);
+        } if($cible->life <= 0) {
+            echo " </br> La cible est morte";
         }
-
     }
 }
