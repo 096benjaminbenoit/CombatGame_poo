@@ -13,8 +13,5 @@ $chefMinion = new Personnages("chef minion", 100, 0, 100);
 
 
 $hero->lifeBonus();
-$hero->armorBonus();
-
-$hero->randomAttack($chefMinion);
 
 dump($hero, $minion, $lieutenantMinion, $chefMinion);
