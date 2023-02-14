@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+body {
+  background-image: url(img/backcground.png);
+  background-size: cover;
+}
+body .index-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .index-main__h1 {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 100px;
+  color: white;
+  text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.67);
+  margin-top: 100px;
+}
+body .index-main .index-main_form__input {
+  margin-top: 30px;
+  width: 300px;
+  height: 40px;
+  border: none;
+  box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.63);
+  text-indent: 20px;
+}
+body .index-main .index-main_form__button {
+  border: none;
+  background-color: white;
+  height: 40px;
+  width: 100px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.63);
+}
+body .index-main .index-main_form__button:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.fight-main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.fight-main__h1 {
+  font-family: "Shadows Into Light", cursive;
+  font-size: 70px;
+  color: white;
+  text-shadow: 2px 3px 1px rgba(0, 0, 0, 0.67);
+  text-align: center;
+}
+.fight-main_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fight-main_left__name {
+  color: black;
+  font-size: 30px;
+  font-family: "Mukta", sans-serif;
+  background-color: white;
+  padding: 0px 40px;
+  border-radius: 30px;
+}
+.fight-main_left__img {
+  width: 300px;
+}
+.fight-main_left_life {
+  border: solid 2px white;
+  width: 200px;
+  height: 30px;
+}
+.fight-main_left_life__value {
+  display: block;
+  background-color: rgb(0, 196, 0);
+  width: 20%;
+  height: 30px;
+}
+.fight-main_left_armor {
+  border: solid 2px white;
+  width: 200px;
+  height: 30px;
+  margin-top: 10px;
+}
+.fight-main_left_armor__value {
+  display: block;
+  background-color: rgb(5, 134, 255);
+  width: 80%;
+  height: 30px;
+}
+.fight-main__button {
+  margin-top: 400px;
+  border: none;
+  background-color: white;
+  height: 60px;
+  width: 150px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 6px 6px 15px -6px rgba(0, 0, 0, 0.63);
+}
+.fight-main__button:hover {
+  background-color: rgb(168, 0, 0);
+  color: white;
+  cursor: pointer;
+}
+.fight-main_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fight-main_right__name {
+  color: black;
+  font-size: 30px;
+  font-family: "Mukta", sans-serif;
+  background-color: white;
+  padding: 0px 40px;
+  border-radius: 30px;
+}
+.fight-main_right__img {
+  width: 300px;
+}
+.fight-main_right_life {
+  border: solid 2px white;
+  width: 200px;
+  height: 30px;
+}
+.fight-main_right_life__value {
+  display: block;
+  background-color: rgb(0, 196, 0);
+  width: 80%;
+  height: 30px;
+}/*# sourceMappingURL=style.css.map */
