@@ -8,6 +8,13 @@ class Personnages {
     public $armor;
     public $attack;
 
+    public function __construct($na, $li, $ar, $at) {
+        $this->name=$na;
+        $this->life=$li;
+        $this->armor=$ar;
+        $this->attack=$at;
+    }
+
     public function lifeBonus() {
         $this->life = $this->life +50;
     }
@@ -28,7 +35,8 @@ class Personnages {
         } else if ($this->attack > $cible->armor) {
             echo "Succès de l'attaque";
             $cible->life = $cible->life - ($this->attack - $cible->armor);
+        } if($cible->life <= 0) {
+            echo " </br> La cible est morte";
         }
-
     }
 }
